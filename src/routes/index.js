@@ -19,15 +19,6 @@ const Index = (
         {...DefaultProps.tabProps}
       >
         <Stack
-          key="home"
-          title={AppConfig.appName}
-          icon={() => <Icon name="planet" {...DefaultProps.icons} />}
-          {...DefaultProps.navbarProps}
-        >
-          <Scene key="home" component={AboutComponent} />
-        </Stack>
-
-        <Stack
           key="articlesList"
           title="Articles List"
           icon={() => <Icon name="list" {...DefaultProps.icons} />}
@@ -44,6 +35,14 @@ const Index = (
           {...DefaultProps.navbarProps}
         >
           <Scene key="form" component={ArticlesForm} />
+        </Stack>
+        <Stack
+          key="profile"
+          title={AppConfig.appName}
+          icon={() => <Icon name="person" {...DefaultProps.icons} />}
+          {...DefaultProps.navbarProps}
+        >
+          <Scene key="profile" component={AboutComponent} />
         </Stack>
       </Tabs>
     </Scene>
